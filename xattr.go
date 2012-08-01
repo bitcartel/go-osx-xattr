@@ -1,6 +1,8 @@
 // Copyright 2012 Bitcartel Software. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
 
+// +build darwin
+
 // Package xattr wraps OS X functions to manipulate the extended attributes of a file, directory and symbolic link.
 //
 // The functions are a wrapper around xattr system calls.
