@@ -87,7 +87,7 @@ func Listxattr(path string, options int) ([]string, error) {
 
 	// get size of buffer needed for attribute names, type is _Ctype_ssize_t
 	listsize, err := C.listxattr(p, nil, 0, 0)
-	if err != nil {
+	if err != nil || int(listsize)==0 {
 		return nil, err
 	}
 
